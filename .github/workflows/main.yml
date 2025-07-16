@@ -14,3 +14,5 @@ jobs:
           run: echo "echo welcome to our first run"
         - name: checking out the code
           uses: actions/checkout@v4.2.2
+        - name: listing the files
+          run: ls -la
