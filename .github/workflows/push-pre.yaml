@@ -1,0 +1,26 @@
+name: First Workflow
+
+on:
+# types for the webhook event  
+  push:
+#1    
+    branches:
+       - main
+       - "release/**"
+#                 OR
+    paths:  # This workflow will only run if the changes are made in the specified paths "on specific files"
+# علشان تحدد التغيير يكون فين بالضبط مش اي تعديل ي run the pipeline    
+       - "github-actions/.github/workflows/push-pre.yaml"
+#2       
+  pull_request:
+       branches:       
+         - main
+         - "release/**"   
+jobs:
+   example_job:
+     runs-on: ubuntu-latest
+
+     steps:
+        - name: checking out the code
+          uses: actions/checkout@v4.2.2 
+        
