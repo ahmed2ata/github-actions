@@ -1,18 +1,27 @@
 name: First Workflow
 
 on:
+# types for the webhook event  
   push:
+#1    
     branches:
        - main
-
+#                 OR
+    paths:  # This workflow will only run if the changes are made in the specified paths "on specific files"
+# علشان تحدد التغيير يكون فين بالضبط مش اي تعديل ي run the pipeline    
+       - "src/app.js"  # any change in this path will trigger the workflow
+#2       
+  pull_request:
+       branches:       
+         - main
+         - "release/**"   
 jobs:
    example_job:
      runs-on: ubuntu-latest
 
      steps:
-        - name: print a welcome massage
-          run: echo "echo welcome to our first run"
         - name: checking out the code
-          uses: actions/checkout@v4.2.2
-        - name: listing the files
-          run: ls -la
+          uses: actions/checkout@v4.2.2 
+        
+        - name: run the test
+          run: npm test  
