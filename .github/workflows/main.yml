@@ -13,4 +13,4 @@ jobs:
         - name: print a welcome massage
           run: echo "echo welcome to our first run"
         - name: checking out the code
-          run: actions/checkout@v4.2.2
+          uses: actions/checkout@v4.2.2
