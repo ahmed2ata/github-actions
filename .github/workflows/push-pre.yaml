@@ -6,7 +6,6 @@ on:
 #1    
     branches:
        - main
-       - "release/**"
 #                 OR
     paths:  # This workflow will only run if the changes are made in the specified paths "on specific files"
 # علشان تحدد التغيير يكون فين بالضبط مش اي تعديل ي run the pipeline    
