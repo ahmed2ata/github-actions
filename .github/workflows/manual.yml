@@ -1,0 +1,9 @@
+on:
+  workflow_dispatch:
+  
+jobs:
+   manual_job:
+     runs-on: ubuntu-latest
+     steps:
+       - name: deploying app 
+         run: echo "testing only the manual approach"
