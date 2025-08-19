@@ -11,9 +11,9 @@ on:
 # علشان تحدد التغيير يكون فين بالضبط مش اي تعديل ي run the pipeline    
 #       - "src/app.js"  # any change in this path will trigger the workflow 
 #2       
-#  pull_request:
- #      branches:       
- #        - main
+  pull_request:
+       branches:       
+          - main
  #        - "release/**"   
 jobs:
    example_job:
